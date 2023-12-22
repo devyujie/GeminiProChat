@@ -25,9 +25,27 @@ Just click the button above and follow the instructions to deploy your own copy 
 >
 > Thanks to [**antergone**](https://github.com/antergone/palm-proxy) for providing this solution.
 
+### Deploy on Railway
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/v9QL5u?referralCode=tSzmIe)
+
+Just click the button above and follow the instructions to deploy on Railway.
+
 ### Deploy With Docker
 
-Although this project provides a Dockerfile, there is currently a known bug with the Docker deployment method. I am actively working on fixing this issue. Therefore, Docker deployment is not recommended at this moment. If any contributors have a solution to fix this bug, your contributions are highly welcomed. Please feel free to submit a Pull Request (PR) to help me resolve this issue.
+To deploy with Docker, you can use the following command:
+
+```bash
+docker run --name geminiprochat \
+--restart always \
+-p 3000:3000 \
+-itd \
+-e GEMINI_API_KEY=your_api_key_here \
+babaohuang/geminiprochat:latest
+```
+Please make sure to replace `your_api_key_here` with your own GEMINI API key.
+
+This will start the **geminiprochat** service, accessible at `http://localhost:3000`. 
 
 ## Environment Variables
 
